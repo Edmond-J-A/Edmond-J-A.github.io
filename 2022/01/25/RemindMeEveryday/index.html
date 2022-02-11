@@ -149,7 +149,14 @@
 </thead>
 </table>
 <p>目前完成的部分有修改主界面边框条以及背景色功能，通过单击两个按钮调出调色盘，选择自己喜欢的颜色确认，可以进行界面主题色的自定义。界面色相关配置文件将保存在user/AppData/Local/RME/preference.style文件中，以便关闭程序后再次打开时进行配置的读取。</p>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>本程序的两个主要类为item以及menutable</p>
+<h2 id="item："><a href="#item：" class="headerlink" title="item："></a>item：</h2><p>item用来表示每一个用户自定义的需要完成的事项。</p>
+<h4 id="name："><a href="#name：" class="headerlink" title="name："></a>name：</h4><p>成员变量name用于记录事件的名称，用户可以通过直接在窗口进行编辑的方式对名称进行修改。</p>
+<h4 id="priority："><a href="#priority：" class="headerlink" title="priority："></a>priority：</h4><p>成员变量priority用于记录事件的优先级，（暂时未使用）。</p>
+<h4 id="timeRange："><a href="#timeRange：" class="headerlink" title="timeRange："></a>timeRange：</h4><p>成员变量timeRange用于记录事件的时间范围，表示按计划事件应当从几点开始，到几点结束，其格式为“00:00-01:00”。</p>
+<h4 id="checkable："><a href="#checkable：" class="headerlink" title="checkable："></a>checkable：</h4><p>成员变量checkable用于记录事件是否可以在完成后进行勾选以实现从显示页面中移去(checkable为0的事件会作为类似Tips的效果持续显示在主窗口上（未完成）)。</p>
+<h4 id="isvisible"><a href="#isvisible" class="headerlink" title="isvisible:"></a>isvisible:</h4><p>成员变量isvisible用于记录时间是否可以显示在主窗口上（RME的设计逻辑是只会在主窗口上显示当天未完成的事件）。</p>
+
     </div>
 
     <div class="about">
